@@ -29,39 +29,39 @@
 
 ### Automaton Initialization and Display
 
-<p> <h4> void initAEF(AEF *aef): </h4> Initializes an automaton with default values. </p>
-<p> <h4> void afficherAEF(AEF aef): </h4> Displays the current configuration of the automaton. </p>
-<p> <h4> void saisirAEF(AEF *aef):</h4> Inputs the automaton details from the user. </p>
+<p>  void initAEF(AEF *aef):  Initializes an automaton with default values. </p>
+<p>  void afficherAEF(AEF aef):  Displays the current configuration of the automaton. </p>
+<p>  void saisirAEF(AEF *aef): Inputs the automaton details from the user. </p>
 
 ### Automaton Storage and Modification
-<p> <h4> void sauvegarderAEF(AEF aef, const char *nom_fichier): </h4> Saves the automaton configuration to a file. </p>
-<p> <h4> void chargerAEF(AEF *aef, const char *nom_fichier): </h4> Loads an automaton configuration from a file. </p>
-<p> <h4> void modifierAEF(AEF *aef): </h4> Modifies the existing configuration of an automaton. </p>
-<p> <h4> void supprimerAEF(AEF *aef): </h4> Deletes an automaton and frees up memory. </p>
+<p>  void sauvegarderAEF(AEF aef, const char *nom_fichier):  Saves the automaton configuration to a file. </p>
+<p>  void chargerAEF(AEF *aef, const char *nom_fichier):  Loads an automaton configuration from a file. </p>
+<p>  void modifierAEF(AEF *aef):  Modifies the existing configuration of an automaton. </p>
+<p>  void supprimerAEF(AEF *aef):  Deletes an automaton and frees up memory. </p>
 
 ### Automaton Analysis and Operations
-<p> <h4> bool estReconnuParAEF(AEF *aef, const char *mot): </h4> Checks if a given word is recognized by the automaton. </p>
-<p> <h4> bool estAEFComplet(AEF *aef): </h4> Determines if the automaton is complete. </p>
-<p> <h4> void rendreAEFComplet(AEF*aef): </h4> Converts the automaton into a complete automaton by adding missing transitions. </p>
-<p> <h4> bool estAEFDeterministe(AEF *aef):</h4> Checks if the automaton is deterministic. </p>
-<p> <h4> void rendreAEFDeterministe(AEF *aefNonDeterministe, AEF *aefDeterministe):</h4> Converts a non-deterministic automaton into a deterministic one. </p>
-<p> <h4>void complementAEF(AEF *aefOriginal, AEF *aefComplement):</h4> Creates the complement of the given automaton. </p>
-<p> <h4> void miroirAEF(AEF *aefOriginal, AEF *aefMiroir):</h4> Creates the mirror (reverse) automaton of the given automaton. </p>
-<p> <h4> void produitAEFs(AEF *aefA, AEF *aefB, AEF *aefProduit):</h4> Produces the product of two automata.</p>
-<p> <h4> void concatenationAEFs(AEF *aefA, AEF *aefB, AEF *aefConcatenation):</h4> Concatenates two automata.</p>
-<p> <h4> void extraireExpressionReguliere(AEF *aef, char *expressionReguliere):</h4> Extracts a regular expression from the automaton.</p>
-<p> <h4> void trouverLangage(AEF *aef, int etatCourant, char *langage, char *motCourant, bool *visites):</h4> Finds the language recognized by the automaton.</p>
-<p> <h4> void determinerLangageReconnu(AEF *aef, char *langage):</h4> Determines the language recognized by the automaton.</p>
-<p> <h4> bool sontEquivalents(AEF *aef1, AEF *aef2):</h4> Checks if two automata are equivalent.</p>
+<p>  bool estReconnuParAEF(AEF *aef, const char *mot):  Checks if a given word is recognized by the automaton. </p>
+<p>  bool estAEFComplet(AEF *aef):  Determines if the automaton is complete. </p>
+<p>  void rendreAEFComplet(AEF*aef):  Converts the automaton into a complete automaton by adding missing transitions. </p>
+<p>  bool estAEFDeterministe(AEF *aef): Checks if the automaton is deterministic. </p>
+<p>  void rendreAEFDeterministe(AEF *aefNonDeterministe, AEF *aefDeterministe): Converts a non-deterministic automaton into a deterministic one. </p>
+<p> void complementAEF(AEF *aefOriginal, AEF *aefComplement): Creates the complement of the given automaton. </p>
+<p>  void miroirAEF(AEF *aefOriginal, AEF *aefMiroir): Creates the mirror (reverse) automaton of the given automaton. </p>
+<p>  void produitAEFs(AEF *aefA, AEF *aefB, AEF *aefProduit): Produces the product of two automata.</p>
+<p>  void concatenationAEFs(AEF *aefA, AEF *aefB, AEF *aefConcatenation): Concatenates two automata.</p>
+<p>  void extraireExpressionReguliere(AEF *aef, char *expressionReguliere): Extracts a regular expression from the automaton.</p>
+<p>  void trouverLangage(AEF *aef, int etatCourant, char *langage, char *motCourant, bool *visites): Finds the language recognized by the automaton.</p>
+<p>  void determinerLangageReconnu(AEF *aef, char *langage): Determines the language recognized by the automaton.</p>
+<p>  bool sontEquivalents(AEF *aef1, AEF *aef2): Checks if two automata are equivalent.</p>
 
 ### Automaton Optimization
 
-<p> <h4> void marquerEtatsAccessibles(AEF *aef, int etatCourant, bool etatsAccessibles[]):</h4> Marks accessible states in the automaton.</p>
-<p> <h4> void marquerEtatsCoAccessibles(AEF *aef, int etatCourant, bool etatsCoAccessibles[]):</h4> Marks co-accessible states in the automaton.</p>
-<p> <h4> void rendreAutomateEmonde(AEF *aef):</h4> Prunes the automaton by removing non-accessible and non-co-accessible states.</p>
-<p> <h4> void supprimerEtatsInaccessibles(AEF *aef):</h4> Removes inaccessible states from the automaton.</p>
-<p> <h4> void fusionnerEtatsEquivalents(AEF *aef):</h4> Merges equivalent states in the automaton.</p>
-<p> <h4> void rendreAutomateMinimal(AEF *aef):</h4> Minimizes the automaton.</p>
+<p>  void marquerEtatsAccessibles(AEF *aef, int etatCourant, bool etatsAccessibles[]): Marks accessible states in the automaton.</p>
+<p>  void marquerEtatsCoAccessibles(AEF *aef, int etatCourant, bool etatsCoAccessibles[]): Marks co-accessible states in the automaton.</p>
+<p>  void rendreAutomateEmonde(AEF *aef): Prunes the automaton by removing non-accessible and non-co-accessible states.</p>
+<p>  void supprimerEtatsInaccessibles(AEF *aef): Removes inaccessible states from the automaton.</p>
+<p>  void fusionnerEtatsEquivalents(AEF *aef): Merges equivalent states in the automaton.</p>
+<p>  void rendreAutomateMinimal(AEF *aef): Minimizes the automaton.</p>
 
 ## Usage
 
