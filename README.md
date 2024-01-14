@@ -9,7 +9,6 @@
 ### AEF
 
 <p> The 'AEF' structure represents an Automaton with its states, transitions, initial state, and final states. It contains the following fields: </p>
-
 <li> transitions: A 3D array representing state transitions. </li>
 <li> etatInitial: An integer representing the initial state. </li>
 <li> etatsFinaux: An array indicating final states. </li>
@@ -43,26 +42,43 @@
 ### Automaton Analysis and Operations
 
 <li> <strong> bool estReconnuParAEF(AEF *aef, const char *mot): </strong> Checks if a given word is recognized by the automaton. </li>
+
 <li> <strong> bool estAEFComplet(AEF *aef):</strong>  Determines if the automaton is complete. </li>
+
 <li> <strong> void rendreAEFComplet(AEF*aef):</strong>  Converts the automaton into a complete automaton by adding missing transitions. </li>
+
 <li> <strong> bool estAEFDeterministe(AEF *aef):</strong> Checks if the automaton is deterministic. </li>
+
 <li> <strong> void rendreAEFDeterministe(AEF *aefNonDeterministe, AEF *aefDeterministe):</strong> Converts a non-deterministic automaton into a deterministic one. </li>
+
 <li> <strong> void complementAEF(AEF *aefOriginal, AEF *aefComplement):</strong> Creates the complement of the given automaton. </li>
+
 <li> <strong> void miroirAEF(AEF *aefOriginal, AEF *aefMiroir):</strong> Creates the mirror (reverse) automaton of the given automaton. </li>
+
 <li> <strong> void produitAEFs(AEF *aefA, AEF *aefB, AEF *aefProduit):</strong> Produces the product of two automata.</li>
+
 <li> <strong> void concatenationAEFs(AEF *aefA, AEF *aefB, AEF *aefConcatenation):</strong> Concatenates two automata.</li>
+
 <li> <strong> void extraireExpressionReguliere(AEF *aef, char *expressionReguliere):</strong> Extracts a regular expression from the automaton.</li>
+
 <li> <strong> void trouverLangage(AEF *aef, int etatCourant, char *langage, char *motCourant, bool *visites):</strong> Finds the language recognized by the automaton.</li>
+
 <li> <strong> void determinerLangageReconnu(AEF *aef, char *langage):</strong> Determines the language recognized by the automaton.</li>
+
 <li> <strong> bool sontEquivalents(AEF *aef1, AEF *aef2):</strong> Checks if two automata are equivalent.</li>
 
 ### Automaton Optimization
 
 <li> <strong> void marquerEtatsAccessibles(AEF *aef, int etatCourant, bool etatsAccessibles[]):</strong> Marks accessible states in the automaton.</li>
+
 <li> <strong> void marquerEtatsCoAccessibles(AEF *aef, int etatCourant, bool etatsCoAccessibles[]):</strong> Marks co-accessible states in the automaton.</li>
+
 <li> <strong> void rendreAutomateEmonde(AEF *aef):</strong> Prunes the automaton by removing non-accessible and non-co-accessible states.</li>
+
 <li> <strong> void supprimerEtatsInaccessibles(AEF *aef):</strong> Removes inaccessible states from the automaton.</li>
+
 <li> <strong> void fusionnerEtatsEquivalents(AEF *aef):</strong> Merges equivalent states in the automaton.</li>
+
 <li> <strong> void rendreAutomateMinimal(AEF *aef):</strong> Minimizes the automaton.</li>
 
 ## Usage
